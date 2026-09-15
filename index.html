@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sweet Bite | Digital Marketing Campaign</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fff8f5;
+    color: #3d2925;
+    line-height: 1.6;
+}
+
+/* NAVBAR */
+nav {
+    background: #6d3b32;
+    padding: 15px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #ffd6c9;
+}
+
+.nav-links {
+    display: flex;
+    gap: 18px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #ffd6c9;
+}
+
+/* HERO */
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #ffe1d6, #fff8f5);
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    color: #6d3b32;
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background: #6d3b32;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin: 5px;
+}
+
+.btn:hover {
+    background: #9a5c4f;
+}
+
+/* GENERAL */
+section {
+    padding: 70px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title span {
+    color: #a86658;
+    font-weight: bold;
+}
+
+.section-title h2 {
+    font-size: 35px;
+    color: #6d3b32;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    color: #6d3b32;
+    margin-bottom: 10px;
+}
+
+/* PROFILE */
+.profile {
+    background: #fff;
+}
+
+.profile-box {
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.profile-box p {
+    margin-bottom: 12px;
+}
+
+/* KEYWORDS */
+.keyword {
+    display: inline-block;
+    background: #ffe1d6;
+    color: #6d3b32;
+    padding: 10px 15px;
+    margin: 6px;
+    border-radius: 20px;
+}
+
+/* SOCIAL MEDIA */
+.social-card {
+    text-align: center;
+}
+
+.social-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/* ADVERTISEMENT */
+.ad {
+    max-width: 700px;
+    margin: auto;
+    background: #6d3b32;
+    color: white;
+    padding: 50px 30px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.ad h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.ad h3 {
+    font-size: 25px;
+    color: #ffd6c9;
+    margin-bottom: 15px;
+}
+
+.offer {
+    display: inline-block;
+    background: white;
+    color: #6d3b32;
+    padding: 12px 25px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* EMAIL */
+.email-box {
+    max-width: 750px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.email-header {
+    background: #6d3b32;
+    color: white;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+}
+
+.email-body {
+    padding: 25px;
+}
+
+.email-body h3 {
+    color: #6d3b32;
+    margin-bottom: 15px;
+}
+
+/* IMPROVEMENT */
+.improvement li {
+    margin: 12px 0;
+    list-style-position: inside;
+}
+
+/* FOOTER */
+footer {
+    background: #3d2925;
+    color: white;
+    padding: 40px 8%;
+    text-align: center;
+}
+
+footer h2 {
+    color: #ffd6c9;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 7px 0;
+}
+
+/* MOBILE */
+.menu-btn {
+    display: none;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+@media(max-width: 800px) {
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #6d3b32;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    section {
+        padding: 50px 5%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="nav-container">
+
+        <div class="logo">
+            Sweet <span>Bite</span>
+        </div>
+
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#profile">Business Profile</a></li>
+            <li><a href="#audience">Target Audience</a></li>
+            <li><a href="#seo">SEO Keywords</a></li>
+            <li><a href="#social">Social Media</a></li>
+            <li><a href="#advertisement">Advertisement</a></li>
+            <li><a href="#email">Email Marketing</a></li>
+            <li><a href="#improvement">Suggestions</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+
+<!-- HOME -->
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>Sweet Bite</h1>
+
+        <h2>Freshly Baked. Made With Love.</h2>
+
+       
+        <p>
+            Homemade cakes, cupcakes, brownies and delicious baked treats
+            prepared with care and love.
+        </p>
+
+        <a href="#profile" class="btn">Explore Campaign</a>
+
+    </div>
+
+</section>
+
+
+<!-- 01 BUSINESS PROFILE -->
+<section class="profile" id="profile">
+
+    <div class="section-title">
+        <span>01 • BUSINESS PROFILE</span>
+        <h2>Sweet Bite Bakery</h2>
+    </div>
+
+    <div class="profile-box">
+
+        <p>
+            <strong>Business Name:</strong> Sweet Bite
+        </p>
+
+        <p>
+            <strong>Business Type:</strong> Home-Based Bakery
+        </p>
+
+        <p>
+            <strong>Location:</strong> Nagpur, Maharashtra
+        </p>
+
+        <p>
+            <strong>Products:</strong>
+            Homemade Cakes, Cupcakes, Brownies, Cookies,
+            Pastries and Customised Cakes.
+        </p>
+
+        <p>
+            <strong>Unique Selling Proposition:</strong>
+            Fresh homemade bakery products made with quality
+            ingredients and personalised designs.
+        </p>
+
+        <p>
+            <strong>Contact Method:</strong>
+            Instagram, WhatsApp and Phone.
+        </p>
+
+        <p>
+            <strong>Campaign Objective:</strong>
+            Increase awareness of Sweet Bite among local customers,
+            generate relevant online traffic and increase orders.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- 02 TARGET AUDIENCE -->
+<section id="audience">
+
+    <div class="section-title">
+        <span>02 • TARGET AUDIENCE</span>
+        <h2>Who Are We Targeting?</h2>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Young Adults</h3>
+            <p>
+                Age: 18–30 years
+            </p>
+            <p>
+                Interested in cakes, desserts, birthdays,
+                Instagram trends and food content.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Families</h3>
+            <p>
+                Age: 25–55 years
+            </p>
+            <p>
+                Looking for fresh cakes and bakery products
+                for family celebrations.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Event Customers</h3>
+            <p>
+                Age: 20–50 years
+            </p>
+            <p>
+                Customers requiring customised cakes and
+                desserts for birthdays and special events.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Local Customers</h3>
+            <p>
+                Location: Nagpur
+            </p>
+            <p>
+                People searching online for homemade cakes
+                and bakery products near them.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- 03 SEO -->
+<section id="seo">
+
+    <div class="section-title">
+        <span>03 • SEO KEYWORDS</span>
+        <h2>SEO Keyword Strategy</h2>
+    </div>
+
+    <div class="profile-box">
+
+        <h3>Short-Tail Keywords</h3>
+
+        <br>
+
+        <span class="keyword">Bakery</span>
+        <span class="keyword">Cakes</span>
+        <span class="keyword">Cupcakes</span>
+        <span class="keyword">Brownies</span>
+        <span class="keyword">Homemade Cake</span>
+
+        <br><br>
+
+        <h3>Long-Tail Keywords</h3>
+
+        <br>
+
+        <span class="keyword">
+            Homemade cake in Nagpur
+        </span>
+
+        <span class="keyword">
+            Best homemade bakery in Nagpur
+        </span>
+
+        <span class="keyword">
+            Customised birthday cake in Nagpur
+        </span>
+
+        <span class="keyword">
+            Homemade cupcakes near me
+        </span>
+
+        <span class="keyword">
+            Fresh brownies in Nagpur
+        </span>
+
+        <br><br>
+
+        <p>
+            These keywords will be used in website content,
+            social media posts, captions, headings and
+            online business profiles to improve visibility
+            in search results.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- 04 SOCIAL MEDIA -->
+<section id="social">
+
+    <div class="section-title">
+        <span>04 • SOCIAL MEDIA MARKETING PLAN</span>
+        <h2>Social Media Strategy</h2>
+    </div>
+
+    <div class="cards">
+
+        <div class="card social-card">
+
+            <div class="social-icon">📸</div>
+
+            <h3>Instagram</h3>
+
+            <p>
+                Post cake photos, Reels, behind-the-scenes
+                baking videos, customer reviews and offers.
+            </p>
+
+        </div>
+
+
+        <div class="card social-card">
+
+            <div class="social-icon">📘</div>
+
+            <h3>Facebook</h3>
+
+            <p>
+                Share product updates, offers, customer
+                stories and festival promotions.
+            </p>
+
+        </div>
+
+
+        <div class="card social-card">
+
+            <div class="social-icon">💬</div>
+
+            <h3>WhatsApp</h3>
+
+            <p>
+                Use WhatsApp Status and catalogue to show
+                products and receive direct orders.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <br><br>
+
+    <div class="profile-box">
+
+        <h3>Weekly Content Plan</h3>
+
+        <br>
+
+        <p>
+            <strong>Monday:</strong>
+            Product Photo
+        </p>
+
+        <p>
+            <strong>Tuesday:</strong>
+            Baking/Reel Video
+        </p>
+
+        <p>
+            <strong>Wednesday:</strong>
+            Customer Review
+        </p>
+
+        <p>
+            <strong>Thursday:</strong>
+            Product Information
+        </p>
+
+        <p>
+            <strong>Friday:</strong>
+            Special Offer
+        </p>
+
+        <p>
+            <strong>Saturday:</strong>
+            Behind-the-Scenes Content
+        </p>
+
+        <p>
+            <strong>Sunday:</strong>
+            Poll / Customer Engagement
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- 05 ADVERTISEMENT -->
+<section id="advertisement">
+
+    <div class="section-title">
+        <span>05 • ADVERTISEMENT DESIGN</span>
+        <h2>Digital Advertisement</h2>
+    </div>
+
+    <div class="ad">
+
+        <h2>Sweet Bite</h2>
+
+        <h3>Freshly Baked. Made With Love.</h3>
+
+        <p>
+            Homemade Cakes • Cupcakes • Brownies • Cookies
+        </p>
+
+        <p>
+            Perfect for Birthdays, Celebrations & Special Moments.
+        </p>
+
+        <div class="offer">
+            GET 10% OFF ON YOUR FIRST ORDER
+        </div>
+
+        <br><br>
+
+        <p>
+            📍 Nagpur, Maharashtra
+        </p>
+
+        <p>
+            📱 Order through WhatsApp / Instagram
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- 06 EMAIL MARKETING -->
+<section id="email">
+
+    <div class="section-title">
+        <span>06 • EMAIL MARKETING</span>
+        <h2>Promotional Email</h2>
+    </div>
+
+    <div class="email-box">
+
+        <div class="email-header">
+            <strong>From:</strong> Sweet Bite Bakery
+            <br>
+            <strong>Subject:</strong>
+            A Sweet Surprise Is Waiting For You!
+        </div>
+
+        <div class="email-body">
+
+            <h3>Hello Sweet Lover! 🍰</h3>
+
+            <p>
+                Craving something delicious?
+                Sweet Bite brings freshly baked homemade
+                cakes and treats directly to you.
+            </p>
+
+            <br>
+
+            <p>
+                Whether it is a birthday, celebration or
+                simply a sweet craving, we have something
+                special for you.
+            </p>
+
+            <br>
+
+            <h3>🎉 Special Offer</h3>
+
+            <p>
+                Get <strong>10% OFF</strong> on your first order!
+            </p>
+
+            <br>
+
+            <p>
+                Order your favourite homemade treats today
+                and make your special moments sweeter.
+            </p>
+
+            <br>
+
+            <p>
+                <strong>
+                    Sweet Bite – Freshly Baked. Made With Love.
+                </strong>
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- 07 BUSINESS IMPROVEMENT -->
+<section id="improvement">
+
+    <div class="section-title">
+        <span>07 • BUSINESS IMPROVEMENT SUGGESTIONS</span>
+        <h2>How Sweet Bite Can Grow</h2>
+    </div>
+
+    <div class="profile-box improvement">
+
+        <ul>
+
+            <li>
+                Create and maintain a Google Business Profile
+                for better local visibility.
+            </li>
+
+            <li>
+                Encourage customers to leave positive
+                reviews after every order.
+            </li>
+
+            <li>
+                Create attractive Instagram Reels showing
+                the baking process.
+            </li>
+
+            <li>
+                Introduce referral offers for existing customers.
+            </li>
+
+            <li>
+                Create a WhatsApp product catalogue with
+                prices and product photos.
+            </li>
+
+            <li>
+                Run seasonal campaigns during festivals,
+                birthdays and special occasions.
+            </li>
+
+            <li>
+                Track website visits, social media engagement
+                and customer enquiries.
+            </li>
+
+            <li>
+                Use customer feedback to improve products
+                and services.
+            </li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <h2>Sweet Bite</h2>
+
+    <p>
+        Freshly Baked. Made With Love.
+    </p>
+
+    <p>
+        Home-Based Bakery • Nagpur, Maharashtra
+    </p>
+
+    <p>
+        Instagram • WhatsApp • Phone
+    </p>
+
+    <br>
+
+</footer>
+
+
+<script>
+
+function toggleMenu() {
+
+    document.getElementById("navLinks")
+    .classList.toggle("active");
+
+}
+
+</script>
+
+</body>
+</html>
