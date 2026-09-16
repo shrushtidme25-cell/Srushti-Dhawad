@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sweet Bite - Digital Marketing Strategy</title>
+
+<style>
+
+/* ===== GENERAL ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fffaf7;
+    color: #4d302b;
+    line-height: 1.7;
+}
+
+/* ===== NAVBAR ===== */
+
+nav {
+    background: #6d3b32;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ffd9c9;
+}
+
+/* ===== HERO ===== */
+
+.hero {
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    background: #f8ddd2;
+}
+
+.hero h1 {
+    font-size: 65px;
+    color: #6d3b32;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 22px;
+    color: #7e5148;
+}
+
+.hero .btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 28px;
+    background: #6d3b32;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+/* ===== SECTIONS ===== */
+
+section {
+    padding: 75px 8%;
+}
+
+/* ===== MAIN SECTION HEADINGS ===== */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+/* 01 • BUSINESS PROFILE */
+
+.section-title span {
+    display: block;
+    color: #a86658;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+/* Sweet Bite Bakery etc. */
+
+.section-title h2 {
+    font-size: 24px;
+    color: #6d3b32;
+    font-weight: 600;
+    margin: 0 auto;
+    line-height: 1.3;
+}
+
+/* ===== CONTENT BOX ===== */
+
+.content-box {
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(109, 59, 50, 0.10);
+}
+
+.content-box h3 {
+    color: #6d3b32;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.content-box p {
+    margin-bottom: 18px;
+}
+
+.content-box ul {
+    padding-left: 25px;
+}
+
+.content-box li {
+    margin-bottom: 8px;
+}
+
+/* ===== CARDS ===== */
+
+.cards {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(109, 59, 50, 0.10);
+}
+
+.card h3 {
+    color: #6d3b32;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.card p {
+    font-size: 15px;
+}
+
+/* ===== ADVERTISEMENT ===== */
+
+.ad-box {
+    max-width: 850px;
+    margin: auto;
+    background: #f8ddd2;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.ad-box h3 {
+    font-size: 30px;
+    color: #6d3b32;
+    margin-bottom: 15px;
+}
+
+.ad-box p {
+    font-size: 18px;
+}
+
+.ad-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #6d3b32;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ===== EMAIL ===== */
+
+.email-box {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    border-left: 6px solid #a86658;
+    padding: 30px;
+    box-shadow: 0 5px 18px rgba(109, 59, 50, 0.10);
+}
+
+.email-box h3 {
+    color: #6d3b32;
+    margin-bottom: 15px;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+    background: #6d3b32;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer h3 {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width: 800px) {
+
+    nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    section {
+        padding: 55px 5%;
+    }
+
+    .section-title span {
+        font-size: 25px;
+        letter-spacing: 1px;
+    }
+
+    .section-title h2 {
+        font-size: 20px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .content-box {
+        padding: 25px;
+    }
+
+    .ad-box {
+        padding: 25px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+
+<nav>
+
+    <div class="logo">Sweet Bite 🍰</div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#profile">Business Profile</a></li>
+        <li><a href="#audience">Target Audience</a></li>
+        <li><a href="#seo">SEO Keywords</a></li>
+        <li><a href="#social">Social Media</a></li>
+        <li><a href="#advertisement">Advertisement</a></li>
+        <li><a href="#email">Email Marketing</a></li>
+        <li><a href="#improvement">Suggestions</a></li>
+    </ul>
+
+</nav>
+
+
+<!-- ===== HOME ===== -->
+
+<section class="hero" id="home">
+
+    <div>
+
+        <h1>Sweet Bite</h1>
+
+        <p>Freshly Baked. Made With Love. ❤️</p>
+
+        <a href="#profile" class="btn">
+            Explore Our Strategy
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ===== 01 BUSINESS PROFILE ===== -->
+
+<section id="profile">
+
+    <div class="section-title">
+
+        <span>01 • BUSINESS PROFILE</span>
+
+        <h2>Sweet Bite Bakery</h2>
+
+    </div>
+
+    <div class="content-box">
+
+        <h3>About the Business</h3>
+
+        <p>
+            Sweet Bite is a home-based bakery that provides
+            freshly baked and delicious homemade cakes,
+            cupcakes, cookies and other bakery treats.
+        </p>
+
+        <h3>Products / Services</h3>
+
+        <ul>
+            <li>Customized Cakes</li>
+            <li>Cupcakes</li>
+            <li>Cookies</li>
+            <li>Brownies</li>
+            <li>Birthday and Celebration Treats</li>
+            <li>Home Delivery on Selected Orders</li>
+        </ul>
+
+        <h3>Business Goal</h3>
+
+        <p>
+            The main goal is to increase brand awareness,
+            attract local customers and increase online
+            orders through digital marketing.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ===== 02 TARGET AUDIENCE ===== -->
+
+<section id="audience">
+
+    <div class="section-title">
+
+        <span>02 • TARGET AUDIENCE</span>
+
+        <h2>Who Are We Targeting?</h2>
+
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>Age Group</h3>
+
+            <p>
+                Mainly teenagers, young adults and families
+                between 15–45 years.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Location</h3>
+
+            <p>
+                Local customers living near the home bakery
+                and nearby areas.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Interests</h3>
+
+            <p>
+                Cakes, desserts, birthdays, celebrations,
+                food photography and homemade food.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Customer Needs</h3>
+
+            <p>
+                Fresh, tasty, affordable and customized
+                bakery products.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Buying Behaviour</h3>
+
+            <p>
+                Customers who discover products through
+                Instagram, Facebook, WhatsApp and Google.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Special Occasions</h3>
+
+            <p>
+                Birthdays, anniversaries, festivals,
+                parties and small celebrations.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===== 03 SEO KEYWORDS ===== -->
+
+<section id="seo">
+
+    <div class="section-title">
+
+        <span>03 • SEO KEYWORDS</span>
+
+        <h2>SEO Keyword Strategy</h2>
+
+    </div>
+
+    <div class="content-box">
+
+        <h3>Short-Tail Keywords</h3>
+
+        <ul>
+            <li>Home Bakery</li>
+            <li>Homemade Cake</li>
+            <li>Bakery</li>
+            <li>Birthday Cake</li>
+            <li>Cupcakes</li>
+        </ul>
+
+        <br>
+
+        <h3>Long-Tail Keywords</h3>
+
+        <ul>
+            <li>Best homemade cakes near me</li>
+            <li>Fresh homemade birthday cakes</li>
+            <li>Customized cakes for birthday</li>
+            <li>Affordable homemade bakery products</li>
+            <li>Homemade cupcakes near me</li>
+        </ul>
+
+        <br>
+
+        <h3>SEO Strategy</h3>
+
+        <p>
+            These keywords can be used in the website,
+            product descriptions, social media posts,
+            blogs and Google Business Profile to improve
+            online visibility.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ===== 04 SOCIAL MEDIA ===== -->
+
+<section id="social">
+
+    <div class="section-title">
+
+        <span>04 • SOCIAL MEDIA MARKETING</span>
+
+        <h2>Social Media Strategy</h2>
+
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>Instagram</h3>
+
+            <p>
+                Upload attractive cake photos, Reels,
+                Stories, customer reviews and offers.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Facebook</h3>
+
+            <p>
+                Share products, offers, festival campaigns
+                and customer feedback.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>WhatsApp</h3>
+
+            <p>
+                Use WhatsApp Business to share catalogue,
+                prices, offers and receive orders.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Content Ideas</h3>
+
+            <p>
+                Behind-the-scenes baking videos,
+                decorating videos, new products and
+                customer testimonials.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Offers</h3>
+
+            <p>
+                Festival discounts, birthday offers,
+                combo deals and limited-time offers.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Engagement</h3>
+
+            <p>
+                Polls, quizzes, comments, questions and
+                customer-generated content.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===== 05 ADVERTISEMENT ===== -->
+
+<section id="advertisement">
+
+    <div class="section-title">
+
+        <span>05 • ADVERTISEMENT DESIGN</span>
+
+        <h2>Digital Advertisement</h2>
+
+    </div>
+
+    <div class="ad-box">
+
+        <h3>🍰 Freshly Baked Happiness!</h3>
+
+        <p>
+            Delicious homemade cakes, cupcakes and
+            sweet treats made especially for you.
+        </p>
+
+        <p>
+            🎂 Perfect for Birthdays • Parties • Celebrations
+        </p>
+
+        <p>
+            ❤️ Fresh Ingredients | Homemade Taste |
+            Customized Orders
+        </p>
+
+        <a href="#" class="ad-button">
+            Order Now
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ===== 06 EMAIL MARKETING ===== -->
+
+<section id="email">
+
+    <div class="section-title">
+
+        <span>06 • EMAIL MARKETING</span>
+
+        <h2>Promotional Email</h2>
+
+    </div>
+
+    <div class="email-box">
+
+        <h3>Subject: Sweet Treats Are Waiting For You! 🍰</h3>
+
+        <p>
+            Hello Sweet Bite Family!
+        </p>
+
+        <p>
+            Craving something delicious?
+            Sweet Bite brings you freshly baked
+            homemade cakes, cupcakes, cookies and
+            brownies made with love.
+        </p>
+
+        <p>
+            Order your favourite treat today and make
+            your celebration extra special!
+        </p>
+
+        <p>
+            ❤️ Freshly Baked • Homemade • Delicious
+        </p>
+
+        <p>
+            <strong>Order Now and Enjoy the Sweetness!</strong>
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ===== 07 BUSINESS IMPROVEMENT ===== -->
+
+<section id="improvement">
+
+    <div class="section-title">
+
+        <span>07 • BUSINESS IMPROVEMENT</span>
+
+        <h2>How Sweet Bite Can Grow</h2>
+
+    </div>
+
+    <div class="content-box">
+
+        <h3>1. Build Strong Social Media Presence</h3>
+
+        <p>
+            Regularly post attractive photos, videos,
+            Reels and customer reviews.
+        </p>
+
+        <h3>2. Introduce New Products</h3>
+
+        <p>
+            Add seasonal products, festival specials,
+            new flavours and customized designs.
+        </p>
+
+        <h3>3. Customer Reviews</h3>
+
+        <p>
+            Encourage satisfied customers to share
+            reviews and photos of their orders.
+        </p>
+
+        <h3>4. Special Offers</h3>
+
+        <p>
+            Provide discounts, combo offers and
+            referral offers to attract new customers.
+        </p>
+
+        <h3>5. Online Ordering</h3>
+
+        <p>
+            Make ordering easy through WhatsApp Business,
+            social media and the website.
+        </p>
+
+        <h3>Conclusion</h3>
+
+        <p>
+            By using SEO, social media marketing,
+            digital advertisements and email marketing,
+            Sweet Bite can increase its online visibility,
+            attract more customers and grow as a successful
+            home-based bakery.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ===== FOOTER ===== -->
+
+<footer>
+
+    <h3>Sweet Bite 🍰</h3>
+
+    <p>
+        Freshly Baked. Made With Love.
+    </p>
+
+    <p>
+        © 2026 Sweet Bite Bakery | Digital Marketing Project
+    </p>
+
+</footer>
+
+</body>
+</html>
